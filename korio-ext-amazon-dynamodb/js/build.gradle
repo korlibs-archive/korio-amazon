@@ -1,0 +1,8 @@
+apply plugin: 'kotlin-platform-js'
+
+dependencies {
+	expectedBy project(":korio-ext-amazon-dynamodb-common")
+
+	compile project(":korio-ext-amazon-base-js")
+	compile project(":korio-js")
+}
