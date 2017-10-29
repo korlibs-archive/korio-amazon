@@ -1,0 +1,26 @@
+rootProject.name = 'korio-amazon-root'
+
+include(
+		'korio-ext-amazon-base-common',
+		'korio-ext-amazon-base',
+		'korio-ext-amazon-base-js',
+
+		'korio-ext-amazon-dynamodb-common',
+		'korio-ext-amazon-dynamodb',
+		'korio-ext-amazon-dynamodb-js',
+
+		'korio-ext-amazon-s3-common',
+		'korio-ext-amazon-s3',
+		'korio-ext-amazon-s3-js',
+)
+
+def register(String base) {
+	findProject(":$base-common")?.projectDir = file("$base/common")
+	findProject(":$base")?.projectDir = file("$base/jvm")
+	findProject(":$base-android")?.projectDir = file("$base/android")
+	findProject(":$base-js")?.projectDir = file("$base/js")
+}
+
+register('korio-ext-amazon-base')
+register('korio-ext-amazon-dynamodb')
+register('korio-ext-amazon-s3')

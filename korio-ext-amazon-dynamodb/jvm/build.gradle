@@ -4,5 +4,5 @@ dependencies {
 	expectedBy project(":korio-ext-amazon-dynamodb-common")
 
 	compile project(":korio-ext-amazon-base")
-	compile project(":korio")
+	compile "com.soywiz:korio:$korioVersion"
 }

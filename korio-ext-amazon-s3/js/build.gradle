@@ -4,5 +4,5 @@ dependencies {
 	expectedBy project(":korio-ext-amazon-s3-common")
 
 	compile project(":korio-ext-amazon-base-js")
-	compile project(":korio-js")
+	compile "com.soywiz:korio-js:$korioVersion"
 }
