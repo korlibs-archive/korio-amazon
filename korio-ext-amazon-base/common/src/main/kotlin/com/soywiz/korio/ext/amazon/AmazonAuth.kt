@@ -1,12 +1,15 @@
 package com.soywiz.korio.ext.amazon
 
+import com.soywiz.kds.lmapOf
 import com.soywiz.korio.IOException
 import com.soywiz.korio.crypto.AsyncHash
 import com.soywiz.korio.crypto.SimplerMac
 import com.soywiz.korio.crypto.finalize
 import com.soywiz.korio.crypto.toBase64
-import com.soywiz.korio.ds.lmapOf
-import com.soywiz.korio.lang.*
+import com.soywiz.korio.lang.Charsets
+import com.soywiz.korio.lang.Environment
+import com.soywiz.korio.lang.URL
+import com.soywiz.korio.lang.toByteArray
 import com.soywiz.korio.net.http.Http
 import com.soywiz.korio.net.http.HttpDate
 import com.soywiz.korio.util.substr
