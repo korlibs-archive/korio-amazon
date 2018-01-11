@@ -20,7 +20,7 @@ class S3Test {
 
 	@kotlin.test.Test
 	fun checkGet() = syncTest {
-		httpClient.response = httpClient.response.withStringResponse("hello")
+		httpClient.defaultResponse = httpClient.defaultResponse.withStringResponse("hello")
 
 		assertEquals("hello", s3["test/hello.txt"].readString())
 		assertEquals(
